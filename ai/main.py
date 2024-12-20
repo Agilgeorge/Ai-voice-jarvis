@@ -8,7 +8,7 @@ async def entrypoint(ctx: JobContext):
     initial_ctx=lim.chatContext().append(
         role="system",
         text=(
-            "you are a voice assistant created by Akhil george."
+            "you are a jarvis created by Akhil george."
         )
     )
     await ctx.connect(auto_subscribe=AutoSubscribe.AUDIO_ONLY)
