@@ -2,19 +2,15 @@ import enum
 from typing import Annotated
 from livekit.agents import llm
 import logging
-
 logger = logging.getLogger("cosmos-management")
 logger.setLevel(logging.INFO)
-
 class CosmosRegion(enum.Enum):
     MILKY_WAY = "milky_way"
     ANDROMEDA = "andromeda"
     SOMBRERO = "sombrero"
-
 class GalaxyAssistant(llm.FunctionContext):
     def __init__(self) -> None:
         super().__init__()
-
         self._galaxy_details = {
             CosmosRegion.MILKY_WAY: {"stars": 100_000_000_000, "age": 13.6},
             CosmosRegion.ANDROMEDA: {"stars": 1_000_000_000_000, "age": 10},
